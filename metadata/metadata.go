@@ -9,7 +9,6 @@ import(
   "os"
   "os/exec"
   "time"
-
   "gopkg.in/redis.v3"
   //"github.com/gographics/imagick/imagick"
 )

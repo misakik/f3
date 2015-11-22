@@ -5,10 +5,8 @@ import (
   "flag"
   "fmt"
   "net/http"
-
   "github.com/guregu/kami"
   "golang.org/x/net/context"
-
   "github.com/misakik/f3/search"
 )
 

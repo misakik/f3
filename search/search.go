@@ -11,16 +11,14 @@ import (
   "path/filepath"
   "strings"
   "time"
-
   "github.com/blevesearch/bleve"
-
   "github.com/misakik/f3/metadata"
 )
 
 const IndexDBDir  = ".tmp/index.data"
-var LimeIndex bleve.Index
 const MinFileSize = 10000000
 const TikaURL     = "http://localhost:9998/tika"
+var LimeIndex bleve.Index
 
 type IndexData struct {
   Name string
@@ -32,6 +30,7 @@ type IndexData struct {
 
 func Index(root string) {
   count := 0
+  
   // Delete index directory if it already exists
   if _, err := os.Stat(IndexDBDir); err == nil {
     os.RemoveAll(IndexDBDir)
